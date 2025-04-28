@@ -1,14 +1,13 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null); // för flexibilitet kring datatyper
+  const [isLoading, setIsLoading] = useState(true); // för att grundläget ska vara sant
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const controller = new AbortController();
+    const controller = new AbortController(); // för att kunna avbryta hämtade requests
     const signal = controller.signal;
 
     setIsLoading(true);
@@ -21,7 +20,7 @@ export default function useFetch(url) {
       })
       .catch((error) => {
         if (axios.isCancel(error)) {
-          console.log("Fetch request cancelled", error.message);
+          console.log("Fetch request cancelled", error.message); // lite info vid cancel
         } else {
           setIsError(true);
         }
