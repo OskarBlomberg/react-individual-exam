@@ -1,8 +1,22 @@
+import "./app.css";
+import { Link } from "react-router-dom";
+
 function App() {
   return (
-    <>
+    <main>
       <h1>Hello world</h1>
-    </>
+      <ul>
+        <li>
+          <Link to={"/events"}>events</Link>
+        </li>
+        <li>
+          <Link to={"/order"}>order</Link>
+        </li>
+        <li>
+          <Link to={"/tickets"}>tickets</Link>
+        </li>
+      </ul>
+    </main>
   );
 }
 

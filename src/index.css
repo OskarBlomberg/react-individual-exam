@@ -1,7 +1,30 @@
+/* FONT FACE */
+
+@font-face {
+  font-family: "Sansita One";
+  src: url("../public/subset-SansitaOne.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS RESET */
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  --COLOR-MAIN-BG: #231f42;
+  --COLOR-COMPLEMENT: #f56b9a;
+  --COLOR-IMPORTANT: #37aeab;
+  --COLOR-TEXT: #fff;
+  --FONT-MAIN: "Fira Sans", sans-serif;
+  --FONT-HEADERS: "Sansita One", sans-serif;
 }

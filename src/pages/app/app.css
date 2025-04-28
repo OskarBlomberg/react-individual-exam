@@ -1,0 +1,7 @@
+h1 {
+  font-family: var(--FONT-HEADERS);
+}
+
+li {
+  font-family: var(--FONT-MAIN);
+}
