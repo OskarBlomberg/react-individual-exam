@@ -1,10 +1,23 @@
 import "./app.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo_728x712.webp";
 
 function App() {
   return (
-    <main>
-      <h1>Hello world</h1>
+    <>
+      <main className="content">
+        <div className="logo-container">
+          <img
+            className="logo-img"
+            src={logo}
+            width={728} // explicit w&h best practice för att undvika risk för cumulative layout shift
+            height={712}
+            alt="Stilserad logo. En person med partyhatt omgiven av konfett."
+          />
+        </div>
+        <h1>Where It's @</h1>
+        <h2>Ticketing made easy</h2>
+      </main>
       <ul>
         <li>
           <Link to={"/events"}>events</Link>
@@ -16,7 +29,7 @@ function App() {
           <Link to={"/tickets"}>tickets</Link>
         </li>
       </ul>
-    </main>
+    </>
   );
 }
 

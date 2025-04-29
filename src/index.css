@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Sansita One";
-  src: url("../public/subset-SansitaOne.woff2") format("woff2");
+  src: url("/SansitaOne.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,4 +27,23 @@
   --COLOR-TEXT: #fff;
   --FONT-MAIN: "Fira Sans", sans-serif;
   --FONT-HEADERS: "Sansita One", sans-serif;
+}
+
+/* GENERAL */
+
+body {
+  min-height: 100vh;
+  padding-top: 2.5rem;
+  background-color: var(--COLOR-MAIN-BG);
+  color: var(--COLOR-TEXT);
+  font-family: var(--FONT-MAIN);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+h1 {
+  color: var(--COLOR-COMPLEMENT);
+  font-family: var(--FONT-HEADERS);
+  font-size: 2rem;
 }
