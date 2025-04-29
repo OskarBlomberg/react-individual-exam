@@ -1,15 +1,9 @@
-h2 {
-  font-family: var(--FONT-MAIN);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
 li {
+  color: #fff;
   font-family: var(--FONT-MAIN);
 }
 
-.content {
+.landing {
   text-shadow: 1px 1px 1px black;
   margin-top: 40%;
   display: flex;
@@ -17,6 +11,12 @@ li {
   align-items: center;
   gap: 1rem;
 
+  .landing__h2 {
+    font-family: var(--FONT-MAIN);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
   .logo-container {
     max-height: 178px;
     max-width: 182px;

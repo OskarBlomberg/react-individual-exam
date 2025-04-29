@@ -32,14 +32,12 @@
 /* GENERAL */
 
 body {
-  min-height: 100vh;
   padding-top: 2.5rem;
   background-color: var(--COLOR-MAIN-BG);
   color: var(--COLOR-TEXT);
   font-family: var(--FONT-MAIN);
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
 }
 
 h1 {

@@ -1,5 +1,23 @@
 import "./eventsPage.css";
+import useFetch from "../../hooks/useFetch.js";
+import Event from "../../components/EventsEvent.jsx";
 
 export default function EventsPage() {
-  return <h1>EventsPage</h1>;
+  const { data, isLoading, isError } = useFetch(
+    "https://santosnr6.github.io/Data/events.json"
+  );
+
+  console.log(data?.events);
+
+  const events = data?.events.map((event) => (
+    <Event key={event.id} eventInfo={event} />
+  ));
+
+  return (
+    <main className="main">
+      <h1>Events</h1>
+      <input className="search-field" type="text" disabled />
+      {events}
+    </main>
+  );
 }

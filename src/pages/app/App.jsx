@@ -5,7 +5,7 @@ import logo from "../../assets/logo_728x712.webp";
 function App() {
   return (
     <>
-      <main className="content">
+      <main className="landing">
         <div className="logo-container">
           <img
             className="logo-img"
@@ -16,7 +16,7 @@ function App() {
           />
         </div>
         <h1>Where It's @</h1>
-        <h2>Ticketing made easy</h2>
+        <h2 className="landing__h2">Ticketing made easy</h2>
       </main>
       <ul>
         <li>
