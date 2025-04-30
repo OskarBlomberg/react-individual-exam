@@ -4,20 +4,18 @@ import logo from "../../assets/logo_728x712.webp";
 
 function App() {
   return (
-    <>
-      <main className="landing">
-        <div className="logo-container">
-          <img
-            className="logo-img"
-            src={logo}
-            width={728} // explicit w&h best practice för att undvika risk för cumulative layout shift
-            height={712}
-            alt="Stilserad logo. En person med partyhatt omgiven av konfett."
-          />
-        </div>
-        <h1>Where It's @</h1>
-        <h2 className="landing__h2">Ticketing made easy</h2>
-      </main>
+    <main className="landing">
+      <div className="logo-container">
+        <img
+          className="logo-img"
+          src={logo}
+          width={728} // explicit w&h best practice för att undvika risk för cumulative layout shift
+          height={712}
+          alt="Stilserad logo. En person med partyhatt omgiven av konfett."
+        />
+      </div>
+      <h1>Where It's @</h1>
+      <h2 className="landing__h2">Ticketing made easy</h2>
       <ul>
         <li>
           <Link to={"/events"}>events</Link>
@@ -29,7 +27,7 @@ function App() {
           <Link to={"/tickets"}>tickets</Link>
         </li>
       </ul>
-    </>
+    </main>
   );
 }
 

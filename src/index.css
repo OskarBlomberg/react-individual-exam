@@ -32,12 +32,10 @@
 /* GENERAL */
 
 body {
-  padding-top: 2.5rem;
+  padding-top: 34px;
   background-color: var(--COLOR-MAIN-BG);
   color: var(--COLOR-TEXT);
   font-family: var(--FONT-MAIN);
-  display: flex;
-  flex-flow: column nowrap;
 }
 
 h1 {
