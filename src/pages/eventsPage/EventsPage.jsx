@@ -1,6 +1,6 @@
 import "./eventsPage.css";
 import useFetch from "../../hooks/useFetch.js";
-import Event from "../../components/EventsEvent.jsx";
+import EventsEvent from "../../components/EventsEvent.jsx";
 
 export default function EventsPage() {
   const { data, isLoading, isError } = useFetch(
@@ -10,7 +10,7 @@ export default function EventsPage() {
   console.log(data?.events);
 
   const events = data?.events.map((event) => (
-    <Event key={event.id} eventInfo={event} />
+    <EventsEvent key={event.id} eventInfo={event} />
   ));
 
   return (

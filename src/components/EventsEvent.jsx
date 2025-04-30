@@ -1,7 +1,15 @@
-export default function Event({ eventInfo: { name, where, when, price } }) {
+export default function EventsEvent({
+  eventInfo: { name, where, when, price },
+}) {
+  const dateArr = when.date.split(" ");
+  const month = dateArr[1].slice(0, 3).toUpperCase();
+
   return (
     <article className="event">
-      <time className="event__date">{when.date}</time>
+      <div className="event__date">
+        <span>{dateArr[0]}</span>
+        <span>{month}</span>
+      </div>
       <div className="event__container">
         <h2 className="event__name">{name}</h2>
         <span className="event__where">{where}</span>

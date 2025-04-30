@@ -17,16 +17,18 @@
     width: 100%;
     max-width: 400px;
     margin-bottom: 2rem;
-    padding: 0.5rem 0;
     display: flex;
     flex-flow: row nowrap;
     gap: min(4vw, 1rem);
 
     .event__date {
-      height: 4rem;
-      width: 4rem;
+      margin-top: 0.5rem;
+      height: 4.5rem;
+      aspect-ratio: 1;
       flex-shrink: 0;
-      border: 2px solid var(--COLOR-TEXT);
+      text-align: center;
+      border: 1px solid var(--COLOR-TEXT);
+      border-radius: 3px;
       display: grid;
       place-content: center;
     }
@@ -35,7 +37,7 @@
       width: 100%;
       display: flex;
       flex-flow: column nowrap;
-      gap: 0.5rem;
+      gap: 0.25rem;
 
       .event__name {
         font-size: 1.5rem;
@@ -52,7 +54,9 @@
         display: flex;
         justify-content: space-between;
         font-weight: 500;
-        border-bottom: 1px solid var(--COLOR-TEXT);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        padding-bottom: 0.5rem;
 
         .event__time {
           font-size: 0.9;
