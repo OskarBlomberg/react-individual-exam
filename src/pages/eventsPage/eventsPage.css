@@ -12,14 +12,28 @@
     height: 40px;
   }
 
-  .event {
-    height: 4rem;
+  .event-link {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
     width: 100%;
     max-width: 400px;
-    margin-bottom: 2rem;
+    height: fit-content;
+  }
+
+  .event-link:hover {
+    outline: 1px solid var(--COLOR-TRANS);
+    outline-offset: 0.5rem;
+    border-radius: 3px;
+  }
+
+  .event {
+    color: var(--COLOR-TEXT);
+    width: 100%;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-flow: row nowrap;
-    gap: min(4vw, 1rem);
+    gap: 1rem;
 
     .event__date {
       margin-top: 0.5rem;
@@ -54,7 +68,7 @@
         display: flex;
         justify-content: space-between;
         font-weight: 500;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid var(--COLOR-TRANS);
 
         padding-bottom: 0.5rem;
 
