@@ -7,8 +7,6 @@ export default function EventsPage() {
     "https://santosnr6.github.io/Data/events.json"
   );
 
-  console.log(data?.events);
-
   const events = data?.events.map((event) => (
     <EventsEvent key={event.id} eventInfo={event} />
   ));
