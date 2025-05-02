@@ -18,6 +18,14 @@
   box-sizing: border-box;
 }
 
+/* UTILITY */
+
+.off-screen {
+  position: absolute;
+  left: -10000px;
+  /* detta är rekommenderad metod för sc-only enligt flera tillänglighetssidor jag läst. Och väldigt lätt att skriva */
+}
+
 /* VARIABLES */
 
 :root {

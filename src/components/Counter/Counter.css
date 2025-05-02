@@ -1,0 +1,51 @@
+.counter {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--COLOR-COMPLEMENT);
+  border: 2px solid var(--COLOR-COMPLEMENT);
+  border-radius: 3px;
+  text-align: center;
+  display: grid;
+  gap: 1px;
+  grid-template: auto auto / 1fr 2fr 1fr;
+
+  .counter__price {
+    grid-row: span 1;
+    grid-column: span 4;
+    background-color: var(--COLOR-MAIN-BG);
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .counter__decrement-btn,
+  .counter__increment-btn,
+  .counter__total-tickets {
+    background-color: var(--COLOR-MAIN-BG);
+    place-content: center;
+    height: 3rem;
+    border: none;
+  }
+
+  .counter__total-tickets {
+    font-size: 1.3rem;
+  }
+
+  .counter__decrement-btn,
+  .counter__increment-btn {
+    color: var(--COLOR-TEXT);
+    background-color: var(--COLOR-MAIN-BG);
+    font: inherit;
+    font-size: 1.5rem;
+
+    &:hover,
+    &:focus {
+      filter: brightness(1.3);
+      cursor: pointer;
+      font-size: 1.8rem;
+    }
+
+    &:active {
+      filter: brightness(0.8);
+    }
+  }
+}

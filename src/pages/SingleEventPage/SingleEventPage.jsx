@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "./SingleEventPage.css";
 import useFetch from "../../hooks/useFetch";
 import EventDetails from "../../components/EventDetails/EventDetails";
+import Counter from "../../components/Counter/Counter";
 
 export default function SingleEventPage() {
   const { data, isLoading, isError } = useFetch(
@@ -16,6 +17,7 @@ export default function SingleEventPage() {
         Här hittar du biljetterna till:
       </span>
       <EventDetails key={currentEvent.id} eventInfo={currentEvent} />
+      <Counter />
     </>
   ) : isLoading ? (
     <h2>Laddar event...</h2>
