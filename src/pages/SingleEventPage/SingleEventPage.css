@@ -1,0 +1,7 @@
+.singleEventMain {
+  gap: 2rem;
+
+  .singleEventMain__comment {
+    color: var(--COLOR-TRANS);
+  }
+}

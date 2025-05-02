@@ -1,6 +1,6 @@
-import "./eventsPage.css";
+import "./EventsPage.css";
 import useFetch from "../../hooks/useFetch.js";
-import EventsEvent from "../../components/eventsEvent/EventsEvent.jsx";
+import EventsEvent from "../../components/EventsEvent/EventsEvent.jsx";
 
 export default function EventsPage() {
   const { data, isLoading, isError } = useFetch(

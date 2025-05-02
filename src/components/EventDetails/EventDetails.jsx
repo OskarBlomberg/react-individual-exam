@@ -1,4 +1,4 @@
-import "./eventDetails.css";
+import "./EventDetails.css";
 
 export default function EventDetails({
   eventInfo: { name, where, when, price, id },

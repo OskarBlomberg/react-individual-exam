@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./eventsEvent.css";
+import "./EventsEvent.css";
 
 export default function EventsEvent({
   eventInfo: { name, where, when, price, id },

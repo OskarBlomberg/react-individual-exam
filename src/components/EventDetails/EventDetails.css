@@ -1,5 +1,8 @@
 .details {
-  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .details__name {
@@ -14,5 +17,6 @@
 }
 
 .details__where {
+  color: var(--COLOR-TRANS);
   font-style: italic;
 }
