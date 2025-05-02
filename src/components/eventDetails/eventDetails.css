@@ -1,0 +1,18 @@
+.details {
+  text-align: center;
+}
+
+.details__name {
+  font-family: var(--FONT-HEADERS);
+  font-size: 2rem;
+  color: var(--COLOR-COMPLEMENT);
+}
+
+.details__date {
+  color: var(--COLOR-IMPORTANT);
+  font-weight: 600;
+}
+
+.details__where {
+  font-style: italic;
+}
