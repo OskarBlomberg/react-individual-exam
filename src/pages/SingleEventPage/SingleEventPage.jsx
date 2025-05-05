@@ -3,6 +3,7 @@ import "./SingleEventPage.css";
 import useFetch from "../../hooks/useFetch";
 import EventDetails from "../../components/EventDetails/EventDetails";
 import Counter from "../../components/Counter/Counter";
+import LinkButton from "../../components/LinkButton/LinkButton";
 
 export default function SingleEventPage() {
   const { data, isLoading, isError } = useFetch(
@@ -17,7 +18,8 @@ export default function SingleEventPage() {
         Här hittar du biljetterna till:
       </span>
       <EventDetails key={currentEvent.id} eventInfo={currentEvent} />
-      <Counter />
+      <Counter eventInfo={currentEvent} />
+      <LinkButton URI={"/order"}>Till varukorgen</LinkButton>
     </>
   ) : isLoading ? (
     <h2>Laddar event...</h2>
