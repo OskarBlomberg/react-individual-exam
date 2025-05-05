@@ -1,0 +1,23 @@
+.linkButton {
+  width: 100%;
+  max-width: 450px;
+  height: 3rem;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--COLOR-TEXT);
+  background-color: var(--COLOR-IMPORTANT);
+  border-radius: 3px;
+  display: grid;
+  place-content: center;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+}

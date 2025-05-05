@@ -52,3 +52,13 @@ h1 {
   font-family: var(--FONT-HEADERS);
   font-size: 2rem;
 }
+
+.main {
+  width: 80%;
+  min-height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
