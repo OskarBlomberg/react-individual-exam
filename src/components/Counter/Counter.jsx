@@ -1,12 +1,10 @@
 import "./Counter.css";
 import useTicketStore from "../../hooks/ticketStore.js";
-
 export default function Counter({ eventInfo: { price, id } }) {
   const tickets = useTicketStore((state) => state.tickets);
   const incrementTicket = useTicketStore((state) => state.incrementTicket);
   const decrementTicket = useTicketStore((state) => state.decrementTicket);
   const ticketCount = tickets[id] ?? 0;
-  console.log(tickets);
 
   return (
     <section className="counter">
@@ -14,6 +12,7 @@ export default function Counter({ eventInfo: { price, id } }) {
       <p className="counter__price" tabIndex={0} aria-label="Pris">
         {ticketCount * price} sek
       </p>
+
       <button
         className="counter__decrement-btn"
         aria-label="Minska antal biljetter"
