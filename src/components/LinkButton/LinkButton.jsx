@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./LinkButton.css";
 
-export default function ({ URI, children }) {
+export default function ({ URI, onClick, children }) {
   return (
-    <Link to={URI} className="linkButton">
+    <Link to={URI} onClick={onClick} className="linkButton">
       {children}
     </Link>
   );

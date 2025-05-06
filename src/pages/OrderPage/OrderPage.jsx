@@ -3,12 +3,17 @@ import useTicketStore from "../../hooks/ticketStore";
 import useFetch from "../../hooks/useFetch";
 import LinkButton from "../../components/LinkButton/LinkButton";
 import "./orderPage.css";
+import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
 
 export default function OrderPage() {
   const { data, isLoading, isError } = useFetch(
     "https://santosnr6.github.io/Data/events.json"
   );
   const tickets = useTicketStore((state) => state.tickets);
+  const setBoughtTickets = useBoughtTicketStore(
+    (state) => state.setBoughtTickets
+  );
+
   const ticketIds = new Set(Object.keys(tickets)); // för att kunna använda "has", vilket är snabbare
   const eventsWithTickets = data?.events.filter((event) =>
     ticketIds.has(event.id)
@@ -33,7 +38,9 @@ export default function OrderPage() {
       <section className="total-price">
         <h2 className="total-price__header">Totalt:</h2>
         <p className="total-price__price">{totalPrice} sek</p>
-        <LinkButton URI={"/tickets"}>Skicka order</LinkButton>
+        <LinkButton URI={"/tickets"} onClick={() => setBoughtTickets(tickets)}>
+          Skicka order
+        </LinkButton>
       </section>
     </>
   ) : isLoading ? (

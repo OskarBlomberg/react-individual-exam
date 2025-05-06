@@ -7,7 +7,7 @@ import getRandomNumber, {
 const useBoughtTicketStore = create((set) => ({
   boughtTickets: {},
 
-  setBoughtTickets: (ticketsByEvent, listedEvents) =>
+  setBoughtTickets: (ticketsByEvent) =>
     set((state) => {
       const updated = { ...state.boughtTickets };
       const nanoid = customAlphabet("ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789", 5);
@@ -15,8 +15,7 @@ const useBoughtTicketStore = create((set) => ({
       for (const eventId in ticketsByEvent) {
         // eftersom tickets keys är eventID
         const count = ticketsByEvent[eventId];
-        const event = listedEvents.find((e) => e.id === eventId);
-        const priorTickets = updated[eventId]?.tickets || [];
+        const priorTickets = updated[eventId]?.tickets ?? [];
 
         const newTickets = [];
 
@@ -27,7 +26,7 @@ const useBoughtTicketStore = create((set) => ({
         if (priorTickets.length > 0) {
           section = priorTickets[0].section;
           const maxSeat = Math.max(
-            ...priorTickets.map((ticket) => ticket.seatNumber)
+            ...priorTickets.map((ticket) => ticket.seatNumber) // spread gör att "hakparenteserna tas bort" så att max-metoden funkar (annars får man NaN, för den tar inte en iterable)
           );
           startingSeat = maxSeat + 1;
         } else {
@@ -44,11 +43,13 @@ const useBoughtTicketStore = create((set) => ({
         }
 
         updated[eventId] = {
-          event,
           tickets: [...priorTickets, ...newTickets],
         };
       }
+      console.log(updated);
 
       return { boughtTickets: updated };
     }),
 }));
+
+export default useBoughtTicketStore;
