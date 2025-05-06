@@ -34,6 +34,7 @@
   --COLOR-IMPORTANT: #37aeab;
   --COLOR-TEXT: #fff;
   --COLOR-TRANS: rgba(255, 255, 255, 0.8);
+  --TEXT-SHADOW: 1px 1px 0 var(--COLOR-COMPLEMENT);
   --FONT-MAIN: "Fira Sans", sans-serif;
   --FONT-HEADERS: "Sansita One", sans-serif;
 }

@@ -13,8 +13,10 @@
     grid-row: span 1;
     grid-column: span 4;
     background-color: var(--COLOR-MAIN-BG);
+    text-shadow: var(--TEXT-SHADOW);
     padding: 1rem;
     font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .counter__decrement-btn,
