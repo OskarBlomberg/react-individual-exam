@@ -6,7 +6,7 @@ import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
 import getEvents from "../../hooks/useFetch";
 
 export default function OrderPage() {
-  const { data, isLoading, isError } = getEvents;
+  const { data, isLoading, isError } = getEvents();
   const tickets = useTicketStore((state) => state.tickets);
   const setBoughtTickets = useBoughtTicketStore(
     (state) => state.setBoughtTickets
