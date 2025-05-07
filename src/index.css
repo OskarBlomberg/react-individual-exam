@@ -42,7 +42,6 @@
 /* GENERAL */
 
 body {
-  padding-top: 34px;
   background-color: var(--COLOR-MAIN-BG);
   color: var(--COLOR-TEXT);
   font-family: var(--FONT-MAIN);
@@ -55,6 +54,7 @@ h1 {
 }
 
 .main {
+  padding-top: 34px;
   width: 80%;
   min-height: 90vh;
   margin: 0 auto;

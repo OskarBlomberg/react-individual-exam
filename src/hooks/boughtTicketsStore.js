@@ -36,6 +36,7 @@ const useBoughtTicketStore = create((set) => ({
 
         for (let i = 0; i < count; i++) {
           newTickets.push({
+            eventId,
             ticketCode: nanoid(),
             section,
             seatNumber: startingSeat + i,
