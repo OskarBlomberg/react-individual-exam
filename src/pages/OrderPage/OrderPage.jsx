@@ -1,14 +1,12 @@
 import Counter from "../../components/Counter/Counter";
 import useTicketStore from "../../hooks/ticketStore";
-import useFetch from "../../hooks/useFetch";
 import LinkButton from "../../components/LinkButton/LinkButton";
 import "./orderPage.css";
 import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
+import getEvents from "../../hooks/useFetch";
 
 export default function OrderPage() {
-  const { data, isLoading, isError } = useFetch(
-    "https://santosnr6.github.io/Data/events.json"
-  );
+  const { data, isLoading, isError } = getEvents;
   const tickets = useTicketStore((state) => state.tickets);
   const setBoughtTickets = useBoughtTicketStore(
     (state) => state.setBoughtTickets

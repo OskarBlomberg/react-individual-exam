@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import "./SingleEventPage.css";
-import useFetch from "../../hooks/useFetch";
 import EventDetails from "../../components/EventDetails/EventDetails";
 import Counter from "../../components/Counter/Counter";
 import LinkButton from "../../components/LinkButton/LinkButton";
+import getEvents from "../../hooks/useFetch";
 
 export default function SingleEventPage() {
-  const { data, isLoading, isError } = useFetch(
-    "https://santosnr6.github.io/Data/events.json"
-  );
+  const { data, isLoading, isError } = getEvents();
   const { id } = useParams();
   const currentEvent = data?.events.find((event) => event.id === id);
 

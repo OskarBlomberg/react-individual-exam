@@ -1,12 +1,11 @@
-import useFetch from "../../hooks/useFetch";
+import getEvents from "../../hooks/useFetch";
+import Barcode from "react-barcode";
 import "./Ticket.css";
 
 export default function Ticket({
   ticketInfo: { eventId, ticketCode, section, seatNumber },
 }) {
-  const { data, isLoading, isError } = useFetch(
-    "https://santosnr6.github.io/Data/events.json"
-  );
+  const { data, isLoading, isError } = getEvents();
 
   if (isLoading) return <h2>Laddar...</h2>;
 
@@ -19,7 +18,7 @@ export default function Ticket({
       <div className="ticket__field ticket__what">
         <span className="ticket__mini-header">VAD</span>
 
-        <h2>{event.name}</h2>
+        <h2 className="ticket__name">{event.name}</h2>
       </div>
       <div className="ticket__field ticket__where">
         <span className="ticket__mini-header">VAR</span>
@@ -45,11 +44,17 @@ export default function Ticket({
         <span className="ticket__mini-header">INFO</span>
 
         <h3>
-          {section} {seatNumber}
+          Sektion {section} - plats {seatNumber}
         </h3>
       </div>
       <div className="ticket__field ticket__code">
-        <h3>{ticketCode}</h3>
+        <Barcode
+          className="ticket__code__barcode"
+          background="rgba(0, 0, 0, 0.12)"
+          height={50}
+          displayValue={false}
+          value={ticketCode}
+        />
       </div>
     </article>
   );

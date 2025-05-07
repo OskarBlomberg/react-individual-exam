@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+export default function getEvents() {
+  return useFetch("https://santosnr6.github.io/Data/events.json");
+}
+
 const useFetch = (url) => {
   const [data, setData] = useState(null); // för flexibilitet kring datatyper
   const [isLoading, setIsLoading] = useState(true); // för att grundläget ska vara sant
@@ -32,5 +36,3 @@ const useFetch = (url) => {
 
   return { data, isLoading, isError };
 };
-
-export default useFetch;

@@ -1,11 +1,10 @@
 import "./EventsPage.css";
-import useFetch from "../../hooks/useFetch.js";
+
 import EventsEvent from "../../components/EventsEvent/EventsEvent.jsx";
+import getEvents from "../../hooks/useFetch.js";
 
 export default function EventsPage() {
-  const { data, isLoading, isError } = useFetch(
-    "https://santosnr6.github.io/Data/events.json"
-  );
+  const { data, isLoading, isError } = getEvents();
 
   const events = data?.events.map((event) => (
     <EventsEvent key={event.id} eventInfo={event} />
