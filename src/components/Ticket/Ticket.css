@@ -1,0 +1,52 @@
+.ticket {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+
+  div {
+    position: relative;
+
+    .ticket__mini-header {
+      position: absolute;
+      top: 0.4rem;
+      left: 0.6rem;
+      font-size: 0.6rem;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .ticket__field {
+    display: grid;
+    align-items: center;
+    padding-left: 1rem;
+  }
+
+  .ticket__what {
+    grid-column: span 3;
+  }
+
+  .ticket__where {
+    grid-column: span 3;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .ticket__when,
+  .ticket__from,
+  .ticket__to {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .ticket__info {
+    grid-column: span 3;
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  .ticket__code {
+    place-content: center;
+    grid-column: span 3;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
