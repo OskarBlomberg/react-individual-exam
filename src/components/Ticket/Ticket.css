@@ -15,7 +15,7 @@
       top: 0.4rem;
       left: 0.6rem;
       font-size: 0.6rem;
-      color: rgba(0, 0, 0, 0.4);
+      color: var(--COLOR-DARK-GREY);
     }
   }
 
@@ -27,7 +27,7 @@
 
   .ticket__what {
     grid-column: span 3;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+    border-bottom: 1px dashed var(--COLOR-DARK-GREY);
 
     .ticket__name {
       font-family: var(--FONT-HEADERS);
@@ -37,35 +37,39 @@
   }
 
   .ticket__where {
-    color: rgba(0, 0, 0, 0.8);
+    color: #4a4a4a;
     grid-column: span 3;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: #f7f7f7;
   }
 
   .ticket__when,
   .ticket__from,
   .ticket__to {
-    color: rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.06);
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
-    border-top: 1px dashed rgba(0, 0, 0, 0.4);
+    color: #606060;
+    background-color: #f0f0f0;
+    border-bottom: 1px dashed var(--COLOR-DARK-GREY);
+    border-top: 1px dashed var(--COLOR-DARK-GREY);
   }
 
   .ticket__from {
-    border: 1px dashed rgba(0, 0, 0, 0.4);
+    border: 1px dashed var(--COLOR-DARK-GREY);
   }
 
   .ticket__info {
     grid-column: span 3;
-    color: rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.09);
+    color: #5d5d5d;
+    background-color: #e8e8e8;
   }
 
   .ticket__code {
     place-content: center;
     grid-column: span 3;
-    color: rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, 0.12);
+    color: var(--COLOR-DARK-GREY);
+    background-color: #e0e0e0;
     font-size: 0.8rem;
+
+    .ticket__code__number {
+      text-align: center;
+    }
   }
 }

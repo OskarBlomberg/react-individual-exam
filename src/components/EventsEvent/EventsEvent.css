@@ -8,7 +8,7 @@
 }
 
 .event-link:hover {
-  outline: 1px solid var(--COLOR-TRANS);
+  outline: 1px solid var(--COLOR-LIGHT-GREY);
   outline-offset: 0.5rem;
   border-radius: 3px;
 }
@@ -54,7 +54,7 @@
       display: flex;
       justify-content: space-between;
       font-weight: 500;
-      border-bottom: 1px solid var(--COLOR-TRANS);
+      border-bottom: 1px solid var(--COLOR-LIGHT-GREY);
 
       padding-bottom: 0.5rem;
 

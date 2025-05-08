@@ -50,11 +50,12 @@ export default function Ticket({
       <div className="ticket__field ticket__code">
         <Barcode
           className="ticket__code__barcode"
-          background="rgba(0, 0, 0, 0.12)"
+          background="#E0E0E0"
           height={50}
           displayValue={false}
           value={ticketCode}
         />
+        <p className="ticket__code__number">#{ticketCode}</p>
       </div>
     </article>
   );

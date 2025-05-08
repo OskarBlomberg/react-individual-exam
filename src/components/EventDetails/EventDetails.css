@@ -17,6 +17,6 @@
 }
 
 .details__where {
-  color: var(--COLOR-TRANS);
+  color: var(--COLOR-LIGHT-GREY);
   font-style: italic;
 }
