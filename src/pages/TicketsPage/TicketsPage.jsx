@@ -11,6 +11,7 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import Ticket from "../../components/Ticket/Ticket";
 import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function TicketsPage() {
   const boughtTickets = useBoughtTicketStore((state) => state.boughtTickets);
@@ -26,22 +27,23 @@ export default function TicketsPage() {
   ));
 
   return (
-    <main className="main tickets-page">
-      <h1 className="tickets-page__h1">Dina biljetter</h1>
-      {allTickets.length > 0 ? (
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          {renderTickets}
-        </Swiper>
-      ) : (
-        <p>Du har inga aktuella biljetter än.</p>
-      )}
-    </main>
+    <>
+      <main className="main tickets-page">
+        <h1 className="tickets-page__h1">Dina biljetter</h1>
+        {allTickets.length > 0 ? (
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+          >
+            {renderTickets}
+          </Swiper>
+        ) : (
+          <p>Du har inga aktuella biljetter än.</p>
+        )}
+      </main>
+      <Navbar />
+    </>
   );
 }
-
-// Varje ticket-komponent får göra ett fetchanrop, men det kommer sen att flyttas till en store eller nåt

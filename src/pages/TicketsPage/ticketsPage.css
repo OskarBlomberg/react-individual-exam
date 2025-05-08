@@ -1,8 +1,8 @@
 .tickets-page {
   position: relative;
   background: linear-gradient(var(--COLOR-COMPLEMENT), var(--COLOR-MAIN-BG));
-  height: 100vh;
   width: 100%;
+  overflow: hidden;
 
   .tickets-page__h1 {
     color: var(--COLOR-TEXT);
@@ -10,10 +10,11 @@
 }
 
 .swiper {
+  margin: auto;
   width: 90%;
   max-width: 300px;
   height: 90vh;
-  max-height: 30rem;
+  max-height: 500px;
 }
 
 .swiper-slide {
@@ -22,6 +23,7 @@
   font-weight: bold;
   background-color: #f0f0f0;
 }
+
 .swiper-slide-active {
   background-color: var(--COLOR-TEXT);
   box-shadow: 0 1px 2px #8b8b8b;

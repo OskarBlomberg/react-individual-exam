@@ -1,11 +1,6 @@
-li {
-  color: #fff;
-  font-family: var(--FONT-MAIN);
-}
-
 .landing {
   text-shadow: 1px 1px 1px black;
-  margin-top: 15vh;
+  padding-top: 22vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

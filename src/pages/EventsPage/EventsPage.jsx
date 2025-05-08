@@ -2,6 +2,7 @@ import "./EventsPage.css";
 
 import EventsEvent from "../../components/EventsEvent/EventsEvent.jsx";
 import getEvents from "../../hooks/useFetch.js";
+import Navbar from "../../components/Navbar/Navbar.jsx";
 
 export default function EventsPage() {
   const { data, isLoading, isError } = getEvents();
@@ -11,10 +12,13 @@ export default function EventsPage() {
   ));
 
   return (
-    <main className="main">
-      <h1>Events</h1>
-      <input className="search-field" type="text" disabled />
-      {events}
-    </main>
+    <>
+      <main className="main">
+        <h1>Events</h1>
+        <input className="search-field" type="text" disabled />
+        {events}
+      </main>
+      <Navbar />
+    </>
   );
 }
