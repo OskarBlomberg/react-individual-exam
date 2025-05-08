@@ -1,0 +1,17 @@
+.back-button {
+  width: 48px; /* Fingervänlig storlek */
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--COLOR-IMPORTANT);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+}

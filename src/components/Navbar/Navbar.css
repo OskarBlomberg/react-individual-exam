@@ -1,17 +1,27 @@
-.navbar {
+.footer {
+  text-shadow: 0 0 1px var(--COLOR-DARK-GREY);
   background-color: var(--COLOR-IMPORTANT);
+  z-index: 1;
   position: sticky;
   bottom: 0;
   height: 48px; /* min-storlek för tum-vänliga knappar */
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 
-  .navbar__link {
-    text-decoration: none;
-    color: var(--COLOR-TEXT);
-    height: 100%;
-    place-content: center;
+  .navbar {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    .navbar__link {
+      text-decoration: none;
+      color: var(--COLOR-TEXT);
+      height: 100%;
+      place-content: center;
+    }
   }
 }

@@ -1,5 +1,14 @@
-.search-field {
+.form-placeholder {
   width: 100%;
   max-width: 400px;
   height: 40px;
+  display: flex;
+
+  .search-field {
+    flex-grow: 1;
+  }
+
+  .search-button {
+    width: 40px;
+  }
 }

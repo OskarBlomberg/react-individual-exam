@@ -47,7 +47,6 @@ const useBoughtTicketStore = create((set) => ({
           tickets: [...priorTickets, ...newTickets],
         };
       }
-      console.log(updated);
 
       return { boughtTickets: updated };
     }),

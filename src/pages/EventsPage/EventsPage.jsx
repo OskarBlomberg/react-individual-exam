@@ -1,4 +1,5 @@
 import "./EventsPage.css";
+import { Search } from "lucide-react";
 
 import EventsEvent from "../../components/EventsEvent/EventsEvent.jsx";
 import getEvents from "../../hooks/useFetch.js";
@@ -15,7 +16,23 @@ export default function EventsPage() {
     <>
       <main className="main">
         <h1>Events</h1>
-        <input className="search-field" type="text" disabled />
+        <div className="form-placeholder">
+          <input
+            aria-label="Search events"
+            className="search-field"
+            type="text"
+            disabled
+          />
+          <button
+            title="seach-button"
+            aria-label="search button"
+            className="search-button"
+            disabled
+          >
+            <Search />
+          </button>
+        </div>
+
         {events}
       </main>
       <Navbar />

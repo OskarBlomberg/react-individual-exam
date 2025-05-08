@@ -1,7 +1,11 @@
 .tickets-page {
   position: relative;
-  background: linear-gradient(var(--COLOR-COMPLEMENT), var(--COLOR-MAIN-BG));
+  background: linear-gradient(
+    var(--COLOR-COMPLEMENT),
+    var(--COLOR-MAIN-BG) 80%
+  );
   width: 100%;
+  max-width: unset;
   overflow: hidden;
 
   .tickets-page__h1 {

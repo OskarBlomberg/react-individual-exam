@@ -4,6 +4,7 @@ import EventDetails from "../../components/EventDetails/EventDetails";
 import Counter from "../../components/Counter/Counter";
 import LinkButton from "../../components/LinkButton/LinkButton";
 import getEvents from "../../hooks/useFetch";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function SingleEventPage() {
   const { data, isLoading, isError } = getEvents();
@@ -26,7 +27,10 @@ export default function SingleEventPage() {
   );
   return (
     <main className="main singleEventMain">
-      <h1>Event</h1>
+      <header className="header">
+        <BackButton />
+        <h1>Event</h1>
+      </header>
       {toRender}
     </main>
   );

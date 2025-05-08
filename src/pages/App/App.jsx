@@ -1,5 +1,4 @@
 import "./App.css";
-import { Link } from "react-router-dom";
 import logo from "../../assets/logo_728x712.webp";
 import Navbar from "../../components/Navbar/Navbar";
 
