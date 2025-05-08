@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useTicketStore = create((set, get) => ({
+const useTicketStore = create((set) => ({
   tickets: {},
 
   incrementTicket: (id) =>
@@ -17,7 +17,7 @@ const useTicketStore = create((set, get) => ({
       return { tickets: updated };
     }),
 
-  clearTicketStore: () => set({ tickets: 0 }),
+  clearTicketStore: () => set({ tickets: {} }),
 }));
 
 export default useTicketStore;

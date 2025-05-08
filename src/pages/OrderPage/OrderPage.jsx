@@ -4,7 +4,6 @@ import LinkButton from "../../components/LinkButton/LinkButton";
 import "./orderPage.css";
 import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
 import getEvents from "../../hooks/useFetch";
-import BackButton from "../../components/BackButton/BackButton";
 
 export default function OrderPage() {
   const { data, isLoading, isError } = getEvents();
@@ -58,10 +57,7 @@ export default function OrderPage() {
 
   return (
     <main className="main">
-      <header className="header">
-        <BackButton />
-        <h1>Varukorg</h1>
-      </header>
+      <h1>Varukorg</h1>
       {renderTickets}
     </main>
   );
