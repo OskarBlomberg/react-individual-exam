@@ -11,7 +11,10 @@ export default function CartButton() {
 
   const navigate = useNavigate();
   return (
-    <button className="header-button" onClick={() => navigate("/order")}>
+    <button
+      className="header-button header-button--cart"
+      onClick={() => navigate("/order")}
+    >
       <ShoppingCart color="white" size={30} />
       <span className="cart-count">{totalTickets}</span>
     </button>

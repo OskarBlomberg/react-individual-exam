@@ -11,9 +11,9 @@
   align-items: center;
 
   .header__container {
-    width: 100%;
+    width: 90%;
     max-width: 450px;
-    padding: 0 1rem;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,7 @@
       border: none;
       background-color: var(--COLOR-IMPORTANT);
       text-shadow: 1px 1px var(--COLOR-DARK-GREY);
+      box-shadow: -1px 1px 3px var(--COLOR-MAIN-BG);
       cursor: pointer;
       position: relative;
 
@@ -38,10 +39,14 @@
       }
     }
 
+    .header-button--cart {
+      margin-left: auto;
+    }
+
     .cart-count {
-      color: var(--COLOR-TEXT);
-      text-shadow: 0 0 1px var(--COLOR-DARK-GREY);
-      box-shadow: -1px 1px 1px var(--COLOR-DARK-GREY);
+      color: var(--COLOR-MAIN-BG);
+      font-weight: 600;
+      box-shadow: -1px 1px 3px var(--COLOR-MAIN-BG);
       background-color: var(--COLOR-COMPLEMENT);
       width: 1.5rem;
       height: 1.5rem;

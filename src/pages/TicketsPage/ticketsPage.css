@@ -10,6 +10,7 @@
 
   .tickets-page__h1 {
     color: var(--COLOR-TEXT);
+    text-shadow: -1px 1px 3px var(--COLOR-MAIN-BG);
   }
 }
 
