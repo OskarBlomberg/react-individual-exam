@@ -7,6 +7,7 @@ const useTicketStore = create((set, get) => ({
     set((state) => ({
       tickets: { ...state.tickets, [id]: (state.tickets[id] || 0) + 1 },
     })),
+
   decrementTicket: (id) =>
     set((state) => {
       const current = state.tickets[id] || 0;
@@ -15,6 +16,8 @@ const useTicketStore = create((set, get) => ({
 
       return { tickets: updated };
     }),
+
+  clearTicketStore: () => set({ tickets: 0 }),
 }));
 
 export default useTicketStore;

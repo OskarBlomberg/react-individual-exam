@@ -8,6 +8,7 @@ import getEvents from "../../hooks/useFetch";
 export default function OrderPage() {
   const { data, isLoading, isError } = getEvents();
   const tickets = useTicketStore((state) => state.tickets);
+  const clearTicketStore = useTicketStore((state) => state.clearTicketStore);
   const setBoughtTickets = useBoughtTicketStore(
     (state) => state.setBoughtTickets
   );
@@ -21,6 +22,11 @@ export default function OrderPage() {
       const quantity = tickets[event.id] || 0;
       return sum + quantity * event.price;
     }, 0) || 0;
+
+  const handleClick = () => {
+    setBoughtTickets(tickets);
+    clearTicketStore();
+  };
 
   const renderTickets = eventsWithTickets ? (
     <>
@@ -36,7 +42,7 @@ export default function OrderPage() {
       <section className="total-price">
         <h2 className="total-price__header">Totalt:</h2>
         <p className="total-price__price">{totalPrice} sek</p>
-        <LinkButton URI={"/tickets"} onClick={() => setBoughtTickets(tickets)}>
+        <LinkButton URI={"/tickets"} onClick={handleClick}>
           Skicka order
         </LinkButton>
       </section>
