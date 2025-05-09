@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 // import required modules
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Keyboard } from "swiper/modules";
 import Ticket from "../../components/Ticket/Ticket";
 import useBoughtTicketStore from "../../hooks/boughtTicketsStore";
 import Navbar from "../../components/Navbar/Navbar";
@@ -31,9 +31,11 @@ export default function TicketsPage() {
         <h1 className="tickets-page__h1">Dina biljetter</h1>
         {allTickets.length > 0 ? (
           <Swiper
+            tabIndex={0}
             effect={"cards"}
             grabCursor={true}
-            modules={[EffectCards]}
+            keyboard={{ enabled: true }}
+            modules={[Keyboard, EffectCards]}
             className="mySwiper"
           >
             {renderTickets}

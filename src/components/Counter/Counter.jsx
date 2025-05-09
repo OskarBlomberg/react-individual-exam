@@ -22,6 +22,8 @@ export default function Counter({ eventInfo: { price, id } }) {
       </button>
       <p
         className="counter__total-tickets"
+        title="Biljettantal"
+        tabIndex={0}
         aria-label="Nuvarande antal biljetter"
       >
         {ticketCount}
