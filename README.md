@@ -2,7 +2,25 @@
 
 ## Verktyg och bibliotek
 
-Vite,
+### Axios Cache Interceptor
+
+Hela appen ska ha "one source of truth", vilket är det api som används för eventen. Därför görs api-anrop från flera sidor i appen, men för att undvika onödiga anrop cachas resultaten, och endast om det har gått fem minuter sedan senaste anrop (default-tiden) görs ett nytt.
+
+### Lucide-React
+
+Endast ett få antal ikoner används i appen. Lucide är ett aktivt underhållet bibliotek vars ikoner är enkla att stajla, och de är "tree shakable", dvs. att bara de som används importeras. På så sätt blir appen mindre och snabbare.
+
+### Nanoid
+
+För att generera en slumpmässig kod. Det är mycket mindre än UUID, så det kändes passande för detta ändamål. Och då antalet teckentyper för denna apps koder var så begränsat var det väldigt enkelt att konfigurera Nanoid för ändamålet.
+
+### React barcode
+
+Genererar en streckkod utifrån en sträng. Går egentligen att konfigurera enkelt, men dokumentationen var väldigt otydlig. Konfigureras helt enkelt med props.
+
+### Swiper
+
+Gör element swipebara, vilket passade utmärkt för biljetterna. Tydlig dokumentation gjorde att det var enkelt att implementera en snygg lösning nästan rakt av. Skulle även ha gått att använda som huvudsaklig navigation, men routingen hade behövt göras annorlunda, och jag ville även undvika eventuell förvirring på biljettsidan.
 
 ## Uppdrag
 
