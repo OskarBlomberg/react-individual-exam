@@ -26,7 +26,7 @@ const useFetch = (url, cacheID) => {
         signal,
         cache: {
           id: cacheID,
-          cacheTakeover: false, // Stänger av att webläsaren inte chachar (som vi annars sköter manuellt som default) (för att undvika CORS errror i detta fall)
+          cacheTakeover: false, // Stänger av att webläsaren inte chachar (som vi annars sköter manuellt som default) (för att undvika CORS error i detta fall)
           /* interpretHeader: false, // Ignorera cache-instrukitoner från servern. Behövs för att kunna bestämma ttl */
           /*  ttl: 1000 * 60, */ // Cache 1 minut
         },
@@ -36,7 +36,7 @@ const useFetch = (url, cacheID) => {
       })
       .catch((error) => {
         if (error instanceof CanceledError) {
-          // setupCache gör att inte axios.isCancel funkar, så man får fånga med ovan. instanceof är ett keyword
+          // setupCache gör att axios.isCancel inte funkar, så man får fånga med ovan. instanceof är ett keyword
           console.log("Fetch request cancelled", error.message); // lite info vid cancel
         } else {
           setIsError(true);

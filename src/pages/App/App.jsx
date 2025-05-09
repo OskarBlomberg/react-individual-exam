@@ -24,20 +24,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-
-aria-labels
-titles
-alt-text
-
-error handling:
- - felaktig routing
- - api-laddar, api-error
-  - negativa tal / stora tal (max-antal per kund?)
- - 
-
-html:
-- author och description
-- <link rel="icon" href="ikonnamn" type="image/x-icon">
-*/
