@@ -1,6 +1,5 @@
 import "./EventsPage.css";
 import { Search } from "lucide-react";
-
 import EventsEvent from "../../components/EventsEvent/EventsEvent.jsx";
 import getEvents from "../../hooks/useFetch.js";
 import Navbar from "../../components/Navbar/Navbar.jsx";
@@ -8,9 +7,17 @@ import Navbar from "../../components/Navbar/Navbar.jsx";
 export default function EventsPage() {
   const { data, isLoading, isError } = getEvents();
 
-  const events = data?.events.map((event) => (
-    <EventsEvent key={event.id} eventInfo={event} />
-  ));
+  const toRender = isLoading ? (
+    <h3>Laddar...</h3>
+  ) : data ? (
+    data?.events.map((event) => (
+      <EventsEvent key={event.id} eventInfo={event} />
+    ))
+  ) : isError ? (
+    <h3>Eventen kunde inte laddas</h3>
+  ) : (
+    <h3>Vi har inga event på gång just nu</h3>
+  );
 
   return (
     <>
@@ -33,7 +40,7 @@ export default function EventsPage() {
           </button>
         </div>
 
-        {events}
+        {toRender}
       </main>
       <Navbar />
     </>

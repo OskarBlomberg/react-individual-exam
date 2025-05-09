@@ -4,14 +4,15 @@ import EventDetails from "../../components/EventDetails/EventDetails";
 import Counter from "../../components/Counter/Counter";
 import LinkButton from "../../components/LinkButton/LinkButton";
 import getEvents from "../../hooks/useFetch";
-import Header from "../../components/Header/Header";
 
 export default function SingleEventPage() {
-  const { data, isLoading, isError } = getEvents();
+  const { data, isLoading } = getEvents();
   const { id } = useParams();
   const currentEvent = data?.events.find((event) => event.id === id);
 
-  const toRender = currentEvent ? (
+  const toRender = isLoading ? (
+    <h2>Laddar event...</h2>
+  ) : currentEvent ? (
     <>
       <span className="singleEventMain__comment">
         Här hittar du biljetterna till:
@@ -20,8 +21,6 @@ export default function SingleEventPage() {
       <Counter eventInfo={currentEvent} />
       <LinkButton URI={"/order"}>Till varukorgen</LinkButton>
     </>
-  ) : isLoading ? (
-    <h2>Laddar event...</h2>
   ) : (
     <h2>Kunde inte ladda eventet</h2>
   );

@@ -7,9 +7,19 @@ export default function Ticket({
 }) {
   const { data, isLoading, isError } = getEvents();
 
-  if (isLoading) return <h2>Laddar...</h2>;
+  if (isLoading)
+    return (
+      <article className="ticket">
+        <h2>Laddar...</h2>
+      </article>
+    );
 
-  if (isError || !data) return <h2>Biljetten kunde inte laddas</h2>;
+  if (isError || !data)
+    return (
+      <article className="ticket">
+        <h2>Biljetten kunde inte laddas</h2>
+      </article>
+    );
 
   const event = data.events.find((e) => e.id === eventId);
 

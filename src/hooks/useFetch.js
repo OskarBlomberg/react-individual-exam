@@ -40,6 +40,7 @@ const useFetch = (url, cacheID) => {
           console.log("Fetch request cancelled", error.message); // lite info vid cancel
         } else {
           setIsError(true);
+          console.error(error.message);
         }
       })
       .finally(() => setIsLoading(false));
