@@ -13,6 +13,8 @@ export default function CartButton() {
   return (
     <button
       className="header-button header-button--cart"
+      title="kundvagn"
+      aria-label="Till kundvagnen."
       onClick={() => navigate("/order")}
     >
       <ShoppingCart color="white" size={30} />

@@ -5,7 +5,12 @@ export default function BackButton() {
   const navigate = useNavigate();
 
   return (
-    <button className="header-button" onClick={() => navigate(-1)}>
+    <button
+      className="header-button"
+      title="Backa"
+      aria-label="Backa till föregående sida."
+      onClick={() => navigate(-1)}
+    >
       <ArrowLeft color="white" size={30} />
     </button>
   );
